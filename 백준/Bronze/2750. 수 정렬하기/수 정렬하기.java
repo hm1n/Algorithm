@@ -2,8 +2,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/** 선택 정렬 */
-
 public class Main {
     static void swap(int[] arr, int i, int j) {
         int tmp = arr[i];
@@ -25,15 +23,14 @@ public class Main {
             arr[i] = Integer.parseInt(br.readLine());
         }
 
-        // 선택 정렬
-        for (int i = 0; i < arr.length; i++) {
-            int min = i;
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < arr[min]) {
-                    min = j;
-                }
+        // 삽입 정렬
+        for (int i = 1; i < arr.length; i++) {
+            int tmp = arr[i];
+            int j;
+            for (j = i; j > 0 && arr[j - 1] > tmp; j--) {
+                arr[j] = arr[j - 1];
             }
-            swap(arr, i, min);
+            arr[j] = tmp;
         }
 
         // 배열 출력
