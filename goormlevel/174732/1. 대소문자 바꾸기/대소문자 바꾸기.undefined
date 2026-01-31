@@ -1,0 +1,34 @@
+// Run by Node.js
+const readline = require('readline');
+
+
+function solve(input) {
+	var ans = '';
+	const str = input[1];
+
+	for (let ch of str) {
+		if ('a' <= ch && ch <= 'z') {
+			ans += ch.toUpperCase();
+		} else if ('A' <= ch && ch <= 'Z') {
+			ans += ch.toLowerCase();
+		} else {
+			ans += ch;
+		}
+	}
+
+	console.log(ans);
+}
+
+(async () => {
+	let rl = readline.createInterface({ input: process.stdin });
+	
+	const input = [];
+
+  for await (const line of rl) {
+    input.push(line.trim());
+  }
+
+	solve(input.length === 1 ? input[0] : input);
+	
+	process.exit();
+})();
