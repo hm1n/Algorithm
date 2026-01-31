@@ -1,0 +1,33 @@
+// Run by Node.js
+const readline = require('readline');
+
+function solution(input) {
+	let std = [];
+	const n = Number(input[0]);
+	
+
+	for (let i = 1; i < n + 1; i++) {
+		const l = input[i].split(' ');
+		if (l[0] === 'add') {
+			std.push(l[1]);
+		} else {
+			let cnt = 0;
+			for (let j = 0; j < std.length; j++) {
+				if (std[j].startsWith(l[1])) cnt++;
+			}
+			console.log(cnt);
+		}
+	}
+}
+
+(async () => {
+	let rl = readline.createInterface({ input: process.stdin });
+	let input = [];
+	for await (const line of rl) {
+		input.push(line);
+		rl.close();
+	}
+
+	solution(input);
+	process.exit();
+})();
