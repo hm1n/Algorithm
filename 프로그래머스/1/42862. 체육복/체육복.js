@@ -1,22 +1,32 @@
 function solution(n, lost, reserve) {
+    const std = new Array(n).fill(1);
     var answer = 0;
-    const student = Array(n).fill(1);
     
-    lost.forEach((e, i) => student[e - 1]--);
-    reserve.forEach((e, i) => student[e - 1]++);
+    lost.forEach((e, i) => std[e - 1]--);
+    reserve.forEach((e, i) => std[e - 1]++);
     
-    for (let i = 0; i < n; i++) {
-        if (student[i] === 0) {
-            if (student[i - 1] === 2) {
-                student[i - 1]--;
-                student[i]++;
-            } else if (student[i + 1] === 2) {
-                student[i + 1]--;
-                student[i]++;
-            }
+    if (std[0] === 0 && std[1] === 2) {
+        std[0]++;
+        std[1]--;
+    }
+    
+    if (std[n - 1] === 0 && std[n - 2] === 2) {
+        std[n - 1]++;
+        std[n - 2]--;
+    }
+    
+    for (let i = 1; i < n - 1; i++) {
+        if (std[i] === 0 && std[i - 1] === 2) {
+            std[i - 1]--;
+            std[i]++;
+        }
+        
+        if (std[i] === 0 && std[i + 1] === 2) {
+            std[i + 1]--;
+            std[i]++;
         }
     }
     
-    student.forEach((e) => {if (e > 0) answer++;});
+    std.forEach((e, i) => {if (e > 0) answer++;})   
     return answer;
 }
