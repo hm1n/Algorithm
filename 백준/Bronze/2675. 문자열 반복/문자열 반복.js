@@ -11,7 +11,7 @@ function solution(input) {
 
         let newstr = "";
         for (let ch of s) {
-            for (let j = 0; j < r; j++) newstr += ch;
+            newstr += ch.repeat(r);
         }
         console.log(newstr);
     }
