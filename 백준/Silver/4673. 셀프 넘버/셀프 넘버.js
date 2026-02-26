@@ -1,6 +1,6 @@
 /** @format */
 function solution() {
-    const arr = [];
+    const arr = new Array(10001).fill(0);
     let ans = "";
 
     for (let i = 1; i <= 10_000; i++) {
@@ -10,11 +10,11 @@ function solution() {
                 .split("")
                 .map(Number)
                 .reduce((a, b) => a + b) + i;
-        arr.push(num);
+        arr[num] = 1;
     }
 
     for (let i = 1; i <= 10_000; i++) {
-        if (!arr.includes(i)) ans += `${i.toString()}\n`;
+        if (!arr[i]) ans += `${i.toString()}\n`;
     }
     console.log(ans.trim());
 }
