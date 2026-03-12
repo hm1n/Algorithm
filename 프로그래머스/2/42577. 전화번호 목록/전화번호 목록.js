@@ -1,9 +1,8 @@
 function solution(phone_book) {
-    const H = new Set();
-    phone_book = phone_book.sort((a, b) => a.length - b.length);
+    const H = new Set(phone_book);
     
     for (let e of phone_book) {
-        for (let i = 1; i <= e.length; i++) {
+        for (let i = 1; i < e.length; i++) {
             const str = e.slice(0, i);
             
             if (H.has(str)) {
