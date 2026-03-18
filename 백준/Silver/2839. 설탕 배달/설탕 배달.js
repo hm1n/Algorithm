@@ -4,29 +4,32 @@ const input = fs.readFileSync(0, "utf8").trim().split(/\r?\n/);
 
 function solution(input) {
     let N = Number(input[0]);
-    const arr = [];
 
     let cnt5 = 0;
     let cnt3 = 0;
 
-    while (cnt5 * 5 <= N) {
-        if (cnt5 * 5 + cnt3 * 3 === N) {
-            arr.push(cnt5 + cnt3);
-        }
+    if (N === 4 || N === 7) {
+        console.log(-1);
+        return;
+    }
 
-        while (cnt3 * 3 <= N) {
-            if (cnt5 * 5 + cnt3 * 3 === N) {
-                arr.push(cnt5 + cnt3);
-            }
-            cnt3++;
-        }
-
-        cnt3 = 0;
+    while (N >= 5) {
+        N -= 5;
         cnt5++;
     }
 
-    if (arr.length > 0) {
-        console.log(Math.min(...arr));
+    while (N > 0 && N % 3 !== 0) {
+        N += 5;
+        cnt5--;
+    }
+
+    while (N >= 3) {
+        N -= 3;
+        cnt3++;
+    }
+
+    if (N === 0) {
+        console.log(cnt5 + cnt3);
     } else {
         console.log(-1);
     }
