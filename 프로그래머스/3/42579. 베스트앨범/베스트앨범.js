@@ -1,6 +1,5 @@
 function solution(genres, plays) {
     let album = new Map();
-    const totalPlays = [];
     const ans = [];
     
     for (let i = 0; i < plays.length; i++) {
