@@ -7,8 +7,8 @@ function solution(input) {
     let ans = 0;
 
     while (a !== b) {
-        a = Math.floor((a + 1) / 2);
-        b = Math.floor((b + 1) / 2);
+        a = Math.ceil(a / 2);
+        b = Math.ceil(b / 2);
         ans++;
     }
     console.log(ans);
