@@ -23,6 +23,7 @@ function solution(maps) {
             if (0 <= dx && dx < maxX && 0 <= dy && dy < maxY) {
                 if (!visited[dx][dy] && maps[dx][dy]) {
                     Q.push([dx, dy]);
+                    
                     visited[dx][dy] = 1;
                     maps[dx][dy] = maps[x][y] + 1;
                 }
