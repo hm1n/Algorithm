@@ -1,7 +1,8 @@
 function solution(rectangle, characterX, characterY, itemX, itemY) {
-    const G = Array.from({length: 101}, () => new Array(101).fill(0));
-    const visited = Array.from({length: 101}, () => new Array(101).fill(0));
-    const distance = Array.from({length: 101}, () => new Array(15).fill(0));
+    const G = Array.from({length: 102}, () => new Array(102).fill(0));
+    const visited = Array.from({length: 102}, () => new Array(102).fill(0));
+    const distance = Array.from({length: 102}, () => new Array(102).fill(0));
+    
     const Q = [];
     const move = [[1, 0], [0, 1], [-1, 0], [0, -1]];
     
