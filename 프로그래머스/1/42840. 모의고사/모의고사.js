@@ -1,25 +1,23 @@
 function solution(answers) {
-    const arr = ['12345', '21232425', '3311224455'];
+    const cnt = [0, 0, 0];
     const ans = [];
     
-    function score(str) {
-        let cnt = 0;
-        
-        for (let i = 0; i < answers.length; i++) {
-            if (answers[i].toString() === str[i % str.length]) {
-                cnt++;
-            }
-        }
-        return cnt;
+    const arr1 = [1, 2, 3, 4, 5];
+    const arr2 = [2, 1, 2, 3, 2, 4, 2, 5];
+    const arr3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5];
+    
+    for (let i = 0; i < answers.length; i++) {
+        if (answers[i] === arr1[i % arr1.length]) cnt[0]++;
+        if (answers[i] === arr2[i % arr2.length]) cnt[1]++;
+        if (answers[i] === arr3[i % arr3.length]) cnt[2]++;
     }
     
-    let max = 0;
-    for (let i = 1; i <= arr.length; i++) {
-        if (max < score(arr[i - 1])) {
-            max = score(arr[i - 1]);
-        }
-        ans.push([i, score(arr[i - 1])]);
+    const max = Math.max(...cnt);
+    for (let i = 0; i < 3; i++) {
+        if (cnt[i] === max) {
+            ans.push(i + 1);
+        } 
     }
     
-    return ans.filter(e => e[1] === max).map(e => e[0]);
+    return ans;
 }
