@@ -1,21 +1,16 @@
 function solution(participant, completion) {
-    const H = new Map();
+    const map = new Map();
     
-    participant.forEach((e) => {
-        if (H.get(e) >= 1) {
-            H.set(e, H.get(e) + 1);
-        } else {
-            H.set(e, 1);
-        }
-    })
+    for (let p of participant) {
+        if (map.get(p) > 0) map.set(p, map.get(p) + 1);
+        else map.set(p, 1);
+    }
     
-    completion.forEach((e) => {
-        if (H.get(e) > 1) {
-            H.set(e, H.get(e) - 1);
-        } else {
-            H.delete(e);
-        }
-    })
+    for (let c of completion) {
+        if (map.get(c) > 0) map.set(c, map.get(c) - 1);
+        if (map.get(c) === 0) map.delete(c);
+    }
     
-    return [...H.keys()][0];
+    const keys = [...map.keys()]
+    return keys[0];
 }
