@@ -1,7 +1,6 @@
 function solution(nums) {
-    const len = nums.length;
+    const n = nums.length / 2;
+    const m = [...new Set(nums)].length;
     
-    nums = [...new Set(nums)];
-    
-    return nums.length >= len / 2 ? len / 2 : nums.length;  
+    return n < m ? n : m;
 }
