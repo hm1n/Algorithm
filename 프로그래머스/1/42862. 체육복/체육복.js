@@ -1,32 +1,30 @@
 function solution(n, lost, reserve) {
-    const std = new Array(n).fill(1);
-    var answer = 0;
+    const std = new Array(n + 1).fill(1);
     
-    lost.forEach((e, i) => std[e - 1]--);
-    reserve.forEach((e, i) => std[e - 1]++);
+    for (let l of lost) std[l]--;
+    for (let r of reserve) std[r]++;
     
-    if (std[0] === 0 && std[1] === 2) {
-        std[0]++;
-        std[1]--;
-    }
-    
-    if (std[n - 1] === 0 && std[n - 2] === 2) {
-        std[n - 1]++;
-        std[n - 2]--;
-    }
-    
-    for (let i = 1; i < n - 1; i++) {
-        if (std[i] === 0 && std[i - 1] === 2) {
-            std[i - 1]--;
-            std[i]++;
-        }
+    for (let i = 1; i <= n; i++) {
+        if (i > 1) {
+            if (std[i] === 2 && std[i - 1] === 0) {
+                std[i]--;
+                std[i - 1]++;
+            }
+        } 
         
-        if (std[i] === 0 && std[i + 1] === 2) {
-            std[i + 1]--;
-            std[i]++;
+        if (i < n) {
+            if (std[i] === 2 && std[i + 1] === 0) {
+                std[i]--;
+                std[i + 1]++;
+            }
         }
     }
     
-    std.forEach((e, i) => {if (e > 0) answer++;})   
-    return answer;
+    let cnt = 0;
+    
+    for (let i = 1; i <= n; i++) {
+        if (std[i] > 0) cnt++;
+    }
+    
+    return cnt;
 }
