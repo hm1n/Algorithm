@@ -1,20 +1,25 @@
 function solution(s){
-    var stack = [];
-    var top = -1;
+    const S = [];
+    let t = -1;
     
-    for (let ch of s) {
-        if (ch === "\(") {
-            stack.push(ch);
-            top++;
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === '(') {
+            S.push(s[i]);
+            t++;
         } else {
-            if (top > -1 && stack[top] === '\(') {
-                stack.pop();
-                top--;
-            } else {
+            if (t === -1) {
                 return false;
+            }
+            
+            if (S[t] === ')') {
+                return false;
+            } else {
+                S.pop();
+                t--;
             }
         }
     }
     
-    return top === -1 ? true : false;
+    if (t > -1) return false;
+    else return true;
 }
