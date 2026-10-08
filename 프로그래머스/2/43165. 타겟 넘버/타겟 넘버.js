@@ -1,16 +1,11 @@
 function solution(numbers, target) {
-    var answer = 0;
-    
-    function dfs(numbers, idx, sum) {
-        if (idx === numbers.length) {
+    function calc(path, idx, sum) {
+        if (path.length === numbers.length) {
             return sum === target ? 1 : 0;
         }
         
-        return dfs(numbers, idx + 1, sum + numbers[idx]) + dfs(numbers, idx + 1, sum - numbers[idx]);
+        return calc([...path, numbers[idx]], idx + 1, sum + numbers[idx]) + calc([...path, numbers[idx] * (-1)], idx + 1, sum - numbers[idx]);
     }
     
-    answer = dfs(numbers, 0, 0, 0);
-    
-    
-    return answer;
+    return calc(new Array(0), 0, 0);
 }
