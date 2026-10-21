@@ -7,6 +7,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/hm1n/Algorithm/tree/master/0001-two-sum) |
+| [0048-rotate-image](https://github.com/hm1n/Algorithm/tree/master/0048-rotate-image) |
 | [0049-group-anagrams](https://github.com/hm1n/Algorithm/tree/master/0049-group-anagrams) |
 ## Hash Table
 |  |
@@ -27,4 +28,9 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0013-roman-to-integer](https://github.com/hm1n/Algorithm/tree/master/0013-roman-to-integer) |
+| [0048-rotate-image](https://github.com/hm1n/Algorithm/tree/master/0048-rotate-image) |
+## Matrix
+|  |
+| ------- |
+| [0048-rotate-image](https://github.com/hm1n/Algorithm/tree/master/0048-rotate-image) |
 <!---LeetCode Topics End-->
