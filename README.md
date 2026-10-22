@@ -9,6 +9,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0001-two-sum](https://github.com/hm1n/Algorithm/tree/master/0001-two-sum) |
 | [0048-rotate-image](https://github.com/hm1n/Algorithm/tree/master/0048-rotate-image) |
 | [0049-group-anagrams](https://github.com/hm1n/Algorithm/tree/master/0049-group-anagrams) |
+| [1584-min-cost-to-connect-all-points](https://github.com/hm1n/Algorithm/tree/master/1584-min-cost-to-connect-all-points) |
 ## Hash Table
 |  |
 | ------- |
@@ -33,4 +34,28 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0048-rotate-image](https://github.com/hm1n/Algorithm/tree/master/0048-rotate-image) |
+## Union-Find
+|  |
+| ------- |
+| [1584-min-cost-to-connect-all-points](https://github.com/hm1n/Algorithm/tree/master/1584-min-cost-to-connect-all-points) |
+## Graph Theory
+|  |
+| ------- |
+| [1584-min-cost-to-connect-all-points](https://github.com/hm1n/Algorithm/tree/master/1584-min-cost-to-connect-all-points) |
+## Minimum Spanning Tree
+|  |
+| ------- |
+| [1584-min-cost-to-connect-all-points](https://github.com/hm1n/Algorithm/tree/master/1584-min-cost-to-connect-all-points) |
+## Prim's Algorithm
+|  |
+| ------- |
+| [1584-min-cost-to-connect-all-points](https://github.com/hm1n/Algorithm/tree/master/1584-min-cost-to-connect-all-points) |
+## Kruskal's Algorithm
+|  |
+| ------- |
+| [1584-min-cost-to-connect-all-points](https://github.com/hm1n/Algorithm/tree/master/1584-min-cost-to-connect-all-points) |
+## Borůvka's Algorithm
+|  |
+| ------- |
+| [1584-min-cost-to-connect-all-points](https://github.com/hm1n/Algorithm/tree/master/1584-min-cost-to-connect-all-points) |
 <!---LeetCode Topics End-->
