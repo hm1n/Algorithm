@@ -12,6 +12,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0049-group-anagrams](https://github.com/hm1n/Algorithm/tree/master/0049-group-anagrams) |
 | [0054-spiral-matrix](https://github.com/hm1n/Algorithm/tree/master/0054-spiral-matrix) |
 | [0498-diagonal-traverse](https://github.com/hm1n/Algorithm/tree/master/0498-diagonal-traverse) |
+| [0766-toeplitz-matrix](https://github.com/hm1n/Algorithm/tree/master/0766-toeplitz-matrix) |
 | [0819-most-common-word](https://github.com/hm1n/Algorithm/tree/master/0819-most-common-word) |
 | [0937-reorder-data-in-log-files](https://github.com/hm1n/Algorithm/tree/master/0937-reorder-data-in-log-files) |
 | [1584-min-cost-to-connect-all-points](https://github.com/hm1n/Algorithm/tree/master/1584-min-cost-to-connect-all-points) |
@@ -46,6 +47,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0048-rotate-image](https://github.com/hm1n/Algorithm/tree/master/0048-rotate-image) |
 | [0054-spiral-matrix](https://github.com/hm1n/Algorithm/tree/master/0054-spiral-matrix) |
 | [0498-diagonal-traverse](https://github.com/hm1n/Algorithm/tree/master/0498-diagonal-traverse) |
+| [0766-toeplitz-matrix](https://github.com/hm1n/Algorithm/tree/master/0766-toeplitz-matrix) |
 ## Union-Find
 |  |
 | ------- |
